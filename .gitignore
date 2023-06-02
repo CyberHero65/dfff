@@ -1,2 +1,6 @@
-# Google App Engine generated folder
-appengine-generated/
+*.egg-info/
+.modules
+
+**/__pycache__/
+.venv
+**/.DS_Store
