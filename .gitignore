@@ -4,3 +4,15 @@
 **/__pycache__/
 .venv
 **/.DS_Store
+*.obj
+*.bak
+*.dep
+*.lib
+*.a
+*.i
+*.d
+*.uvoptx*
+*.uvguix*
+*.orig
+cconfig.h
+.cortex-debug*
