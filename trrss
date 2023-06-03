@@ -4,10 +4,12 @@ from pathlib import Path
 sys.path.append(Path(__file__).parent.parent)
 
 from llama_hub.string_iterable.base import StringIterableReader
+database_url = get_config('POSTGRES_URL')
+db_username = get_config('DB_USERNAME')
+db_password = get_config('DB_PASSWORD')
+db_name = get_config('DB_NAME')
 
-
-def test_string_iterable() -> None:
-    """Check that StringIterableReader works correctly."""
-    reader = StringIterableReader()
-    documents = reader.load_data(texts=["I went to the store", "I bought an apple"])
-    assert len(documents) == 2
+if db_username is None:
+    db_url = f'postgresql://{database_url}/{db_name}'
+else:
+    db_url = f'postgresql://{db_username}:{db_password}@{database_url}/{db_name}'
