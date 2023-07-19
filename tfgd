@@ -27,8 +27,6 @@ module.exports = defineConfig({
     "cSpell.diagnosticLevel": "Hint",
     "cSpell.showStatus": false,
     "cSpell.words": [
-        "fmt",
-        "esc",
         "rtthread"
     ],
 
